@@ -1,16 +1,44 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 $primary-color: #113e88;
+$secondary-color: #ff343e;
 $white: #ffffff;
 
 body {
   background-color: $primary-color;
 }
 
-h1 {
+h1,
+h2,
+h3,
+p {
   color: $white;
 }
 
 .carousel-item {
-  min-height: 100px;
+  min-height: 250px;
+}
+
+.carousel-caption {
+  bottom: 25%;
+}
+
+.top-space {
+  margin-top: 50px;
+}
+
+.carousel-control-next {
+  display: none;
+}
+
+.carousel-control-prev {
+  display: none;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+a {
+  color: $secondary-color;
 }
