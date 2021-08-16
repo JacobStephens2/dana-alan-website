@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary-color: #113e88;
+$white: #ffffff;
+
+body {
+  background-color: $primary-color;
+}
+
+h1 {
+  color: $white;
+}
+
+.carousel-item {
+  min-height: 100px;
+}

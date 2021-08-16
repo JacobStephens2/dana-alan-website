@@ -15,5 +15,13 @@ module.exports = {
       }
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          includePaths: ["scss"],
+        }
+      },
+    },
   ],
 }

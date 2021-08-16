@@ -2,34 +2,27 @@ import React from "react"
 import Header from '../components/header'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
 import Carousel from 'react-bootstrap/Carousel'
+import slideImage from "../images/birchrun-road-landscape.jpeg"
 
 const Home = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Home" />
-      <h1>As West Vincent Township Supervisor, Dana Alan will</h1>
-      <CardGroup>
-      {
-        data.allMdx.nodes.map((node) => (
-          <div key={node.id}>
-            <Card style={{ width: '18rem' }}>
-              <Card.Body>
-                <Card.Title>
-                  <MDXRenderer>
-                    {node.body}
-                  </MDXRenderer>
-                </Card.Title>
-                <Card.Text>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        ))
-      }
-      </CardGroup>
+      <h1>As West Vincent Township Supervisor, Dana will</h1>
+      <Carousel>
+        {
+          data.allMdx.nodes.map((node) => (
+            <Carousel.Item key={node.id}>
+              <Carousel.Caption>
+                <MDXRenderer>
+                  {node.body}
+                </MDXRenderer>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))
+        }
+      </Carousel>
     </div>
   )
 }
