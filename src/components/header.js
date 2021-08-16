@@ -10,7 +10,7 @@ const Header = ({ pageTitle }) => {
       <title>{pageTitle}</title>
 		<Navbar bg="light" expand="lg">
 			<Container>
-				<Navbar.Brand href="/">Dana Alan</Navbar.Brand>
+				<Navbar.Brand href="/">Dana Alan: West Vincent Supervisor</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="me-auto">
