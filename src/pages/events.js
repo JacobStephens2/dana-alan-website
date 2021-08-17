@@ -5,14 +5,18 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Accordion from 'react-bootstrap/Accordion'
 
 
-const Events = ({ data }) => {
+const Events = props => {
+  const events = props.data.allMdx;
   return (
     <div>
       <Header pageTitle="Events" />
-      <Accordion>
+      <Accordion defaultActiveKey="0">
         {
-          data.allMdx.nodes.map((node) => (
-            <Accordion.Item defaultActiveKey="0" key={node.id}>
+          events.nodes.map((node, index) => (
+            <Accordion.Item eventKey={index} key={node.id}>
+              <Accordion.Header>
+                <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
+                </Accordion.Header>
               <Accordion.Body>
                   <MDXRenderer>
                     {node.body}
@@ -32,6 +36,9 @@ export const query = graphql`
       nodes {
         id
         body
+        frontmatter {
+          title
+        }
       }
     }
   }
