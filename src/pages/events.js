@@ -5,14 +5,13 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Accordion from 'react-bootstrap/Accordion'
 
 
-const Events = props => {
-  const events = props.data.allMdx;
+const Events = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Events" />
       <Accordion defaultActiveKey="0">
         {
-          events.nodes.map((node, index) => (
+          data.allMdx.nodes.map((node, index) => (
             <Accordion.Item eventKey={index} key={node.id}>
               <Accordion.Header>
                 <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
