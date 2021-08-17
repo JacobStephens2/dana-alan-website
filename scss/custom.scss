@@ -7,14 +7,14 @@ $white: #ffffff;
 $black: #000000;
 
 body {
-  background-color: $primary-color;
+  background-color: none;
 }
 
 h1,
 h2,
 h3,
 p {
-  color: $white;
+  color: $primary-color;
 }
 
 .carousel-item {
@@ -96,4 +96,25 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 
 .btn {
   margin-bottom: 1.3rem;
+}
+
+.events-background {
+  background: url(../src/images/dog-walk-full.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.accordion-item:first-child {
+  margin-top: 1rem;
+}
+
+.events-body {
+  background: none;
+}
+
+.events-body h1 {
+  color: $white;
+  margin-top: 2rem;
 }

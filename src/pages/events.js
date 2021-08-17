@@ -4,21 +4,18 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Accordion from 'react-bootstrap/Accordion'
 import Container from 'react-bootstrap/Container'
-import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet";
 
 const Events = ({ data }) => {
   return (
     <div>
+      <Helmet>
+        <html class="events-background" />
+        <body class="events-body" />
+      </Helmet>
       <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
       <Container>
-      <StaticImage
-        src="../images/dog-walk-landscape.jpg"
-        alt="Dana Alan headshot"
-        placeholder="blurred"
-        layout="fixed"
-        width={200}
-        height={200}
-      />
+        <h1>Events</h1>
         <Accordion defaultActiveKey="0">
           {
             data.allMdx.nodes.map((node, index) => (
