@@ -25,6 +25,10 @@ p {
   bottom: 25%;
 }
 
+.carousel-indicators [data-bs-target] {
+  background-color: $secondary-color;
+}
+
 .top-space {
   margin-top: 50px;
 }
