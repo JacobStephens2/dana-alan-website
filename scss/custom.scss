@@ -2,7 +2,9 @@
 
 $primary-color: #002b59;
 $secondary-color: #febe10;
+$tertiary-color: #36b4e5;
 $white: #ffffff;
+$black: #000000;
 
 body {
   background-color: $primary-color;
@@ -28,14 +30,18 @@ p {
 }
 
 a {
-  color: $secondary-color;
+  color: $tertiary-color;
+}
+
+.navbar a {
+  color: $black;
 }
 
 a.menu-item {
   text-decoration: none;
 }
 
-.active {
+a.active {
   color: $primary-color;
 }
 

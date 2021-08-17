@@ -33,10 +33,14 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(filter: {fileAbsolutePath: {regex: "/platform-points/*/"}}) {
+    allMdx(
+      filter: {fileAbsolutePath: {regex: "/platform-points/*/"}}
+      sort: {fields: frontmatter___order, order: ASC}
+    ) {
       nodes {
         frontmatter {
           title
+          order
         }
         id
         body

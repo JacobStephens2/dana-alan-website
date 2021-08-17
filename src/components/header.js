@@ -12,7 +12,7 @@ const Header = ({ pageTitle }) => {
 		<Navbar bg="light" expand="lg">
 			<Container>
 				<Navbar.Brand>
-					<Link to="/" className="menu-item" activeClassName="active">Dana Alan for West Vincent Supervisor</Link>
+					<Link to="/" className="menu-item" activeClassName="active">Dana Alan for WVT Supervisor</Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
