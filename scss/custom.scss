@@ -2,7 +2,7 @@
 
 $primary-color: #002b59;
 $secondary-color: #febe10;
-$tertiary-color: #36b4e5;
+$tertiary-color: #4abbe8;
 $white: #ffffff;
 $black: #000000;
 
@@ -93,3 +93,7 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 }
 
 // scss-docs-end accordion-variables
+
+.btn {
+  margin-bottom: 1.3rem;
+}

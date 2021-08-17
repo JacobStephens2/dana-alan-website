@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 import { StaticImage } from "gatsby-plugin-image"
 
 const About = ({ data }) => {
@@ -17,6 +18,9 @@ const About = ({ data }) => {
             <MDXRenderer>
               {data.mdx.body}
             </MDXRenderer>
+            <Button href="mailto:danaalanWVT@gmail.com" variant="info">
+              Email Dana
+            </Button>
           </Col>
           <Col>
             <StaticImage
