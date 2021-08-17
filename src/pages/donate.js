@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/Col'
 const Donate = ({ data }) => {
   return (
     <div>
-      <Header pageTitle="Donate" />
+      <Header pageTitle="Donate | Dana Alan for Supervisor of West Vincent Township" />
       <Container className="top-space">
         <Row>
           <Col md={10} lg={7} xl={6}>

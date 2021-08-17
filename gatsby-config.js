@@ -11,7 +11,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `content`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       }
     },
     "gatsby-plugin-mdx",
@@ -23,5 +30,8 @@ module.exports = {
         }
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 const Home = ({ data }) => {
   return (
     <div>
-      <Header pageTitle="Home" />
+      <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
       <Container className="top-space">
         <h2>As West Vincent Township Supervisor, Dana Alan will</h2>
       </Container>

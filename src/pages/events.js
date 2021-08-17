@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container'
 const Events = ({ data }) => {
   return (
     <div>
-      <Header pageTitle="Events" />
+      <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
       <Container>
         <Accordion defaultActiveKey="0">
           {

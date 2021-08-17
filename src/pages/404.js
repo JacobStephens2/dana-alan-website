@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 const NotFound = () => {
   return (
     <div>
-      <Header pageTitle="Home" />
+      <Header pageTitle="404 | Dana Alan for Supervisor of West Vincent Township" />
       <Container className="top-space">
         <h1>Page not found</h1>
         <p>Oops! The page you are looking for has been removed or relocated.</p>
