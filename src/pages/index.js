@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Home = ({ data }) => {
   return (
@@ -15,7 +16,7 @@ const Home = ({ data }) => {
       <Carousel fade>
         {
           data.allMdx.nodes.map((node) => (
-            <Carousel.Item key={node.id}>
+            <Carousel.Item className={node.frontmatter.classTitle} key={node.id}>
               <Carousel.Caption>
                 <h1>
                   <MDXRenderer>
@@ -27,6 +28,10 @@ const Home = ({ data }) => {
           ))
         }
       </Carousel>
+      <StaticImage 
+        src="../images/tent-dana.jpg" 
+        alt="Dana campaigning"
+      />
     </div>
   )
 }
@@ -41,6 +46,7 @@ export const query = graphql`
         frontmatter {
           title
           order
+          classTitle
         }
         id
         body
