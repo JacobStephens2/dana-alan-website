@@ -2,32 +2,44 @@ import React from "react"
 import Header from '../components/header'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Accordion from 'react-bootstrap/Accordion'
 
 
-const Events = ({ data }) => {
+const Events = props => {
+  const events = props.data.allMdx;
   return (
     <div>
       <Header pageTitle="Events" />
-      <Container className="top-space">
-        <Row>
-          <Col md={11} lg={8} xl={7}>
-            <MDXRenderer>
-              {data.mdx.body}
-            </MDXRenderer>
-          </Col>
-        </Row>
-      </Container>
+      <Accordion defaultActiveKey="0">
+        {
+          events.nodes.map((node, index) => (
+            <Accordion.Item eventKey={index} key={node.id}>
+              <Accordion.Header>
+                <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
+                </Accordion.Header>
+              <Accordion.Body>
+                  <MDXRenderer>
+                    {node.body}
+                  </MDXRenderer>
+                </Accordion.Body>
+            </Accordion.Item>
+          ))
+        }
+      </Accordion>
     </div>
   )
 }
 
 export const query = graphql`
   query {
-    mdx(slug: {eq: "events"}) {
-      body
+    allMdx(filter: {fileAbsolutePath: {regex: "/events/*/"}}) {
+      nodes {
+        id
+        body
+        frontmatter {
+          title
+        }
+      }
     }
   }
 `
