@@ -30,3 +30,16 @@ p {
 a {
   color: $secondary-color;
 }
+
+a.menu-item {
+  text-decoration: none;
+}
+
+.active {
+  color: $primary-color;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
+}
