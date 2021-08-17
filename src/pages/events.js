@@ -4,20 +4,27 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Accordion from 'react-bootstrap/Accordion'
 import Container from 'react-bootstrap/Container'
-
+import { StaticImage } from "gatsby-plugin-image"
 
 const Events = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
       <Container>
+      <StaticImage
+        src="../images/dog-walk-landscape.jpg"
+        alt="Dana Alan headshot"
+        placeholder="blurred"
+        layout="fixed"
+        width={200}
+        height={200}
+      />
         <Accordion defaultActiveKey="0">
           {
             data.allMdx.nodes.map((node, index) => (
               <Accordion.Item eventKey={index} key={node.id}>
                 <Accordion.Header>
                   <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
-                  &ensp;({node.frontmatter.date} {node.frontmatter.days})
                   </Accordion.Header>
                 <Accordion.Body>
                     <MDXRenderer>
@@ -45,7 +52,6 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "MMMM")
-          days
         }
       }
     }
