@@ -20,7 +20,7 @@ const Header = ({ pageTitle }) => {
 					<Link to="/about" className="nav-link" activeClassName="active">About</Link>
 					<Link to="/fostering-our-future" className="nav-link" activeClassName="active">Fostering Our Future</Link>
 					<Link to="/events" className="nav-link" activeClassName="active">Events</Link>
-					<Link to="/donate" className="nav-link" activeClassName="active">Donate</Link>
+					<Link to="/donate" className="nav-link menu-donate" activeClassName="active">Donate</Link>
 				</Nav>
 				</Navbar.Collapse>
 			</Container>

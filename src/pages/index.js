@@ -10,7 +10,7 @@ const Home = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
-      <Container className="top-space">
+      <Container className="homepage-header">
         <h2>As West Vincent Township Supervisor, Dana Alan will</h2>
       </Container>
       <Carousel fade>
@@ -28,10 +28,12 @@ const Home = ({ data }) => {
           ))
         }
       </Carousel>
-      <StaticImage 
-        src="../images/dana-alan-headshot.jpg" 
-        alt="Dana campaigning"
-      />
+      <Container>
+        <StaticImage 
+          src="../images/dana-alan-headshot.jpg" 
+          alt="Dana campaigning"
+        />
+      </Container>
     </div>
   )
 }

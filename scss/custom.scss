@@ -1,10 +1,15 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-$primary-color: #002b59;
+$primary-color: #002447;
 $secondary-color: #febe10;
 $tertiary-color: #4abbe8;
+$faded-black: rgba(0, 0, 0, 0.4);
+$moderate-black: rgba(0, 0, 0, 0.9);
 $white: #ffffff;
 $black: #000000;
+$border-width: 2px;
+
+// General
 
 body {
   background-color: none;
@@ -17,6 +22,12 @@ p {
   color: $primary-color;
 }
 
+a {
+  color: $tertiary-color;
+}
+
+// Carousel
+
 .carousel-item {
   min-height: 250px;
 }
@@ -28,19 +39,26 @@ p {
   align-items: center;
   justify-content: center;
   height: 100%;
+  left: 7%;
+  right: 7%;
 }
 
 .carousel-indicators [data-bs-target] {
   background-color: $primary-color;
 }
 
-.top-space {
-  margin-top: 50px;
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
 }
 
-a {
-  color: $tertiary-color;
+.homepage-header {
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
 }
+
+// Menu
 
 .navbar a {
   color: $black;
@@ -54,9 +72,45 @@ a.active {
   color: $primary-color;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-  display: none;
+a.nav-link.menu-donate.active {
+  border: $border-width solid $moderate-black;
+}
+
+a.nav-link.menu-donate {
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: $border-width solid $faded-black;
+}
+
+.bg-light {
+  background-color: $white !important;
+}
+
+// Buttons
+
+.btn {
+  margin-bottom: 1.3rem;
+  background-color: $tertiary-color;
+  border-color: $tertiary-color;
+}
+
+// Events page
+
+.events-background {
+  background: url(../src/images/dog-walk-full.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.events-body {
+  background: none;
+}
+
+.events-body h1 {
+  color: $white;
+  margin-top: 2rem;
 }
 
 // Accordion
@@ -101,29 +155,8 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
   color: $primary-color;
 }
 
-// scss-docs-end accordion-variables
-
-.btn {
-  margin-bottom: 1.3rem;
-}
-
-.events-background {
-  background: url(../src/images/dog-walk-full.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .accordion-item:first-child {
   margin-top: 1rem;
 }
 
-.events-body {
-  background: none;
-}
-
-.events-body h1 {
-  color: $white;
-  margin-top: 2rem;
-}
+// scss-docs-end accordion-variables
