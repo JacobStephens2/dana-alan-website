@@ -5,34 +5,55 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Accordion from 'react-bootstrap/Accordion'
 import Container from 'react-bootstrap/Container'
 import { Helmet } from "react-helmet";
+import { StaticImage } from 'gatsby-plugin-image'
+
 
 const Events = ({ data }) => {
   return (
     <div>
       <Helmet>
-        <html class="events-background" />
         <body class="events-body" />
       </Helmet>
       <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
-      <Container>
-        <h1>Events</h1>
-        <Accordion defaultActiveKey="0">
-          {
-            data.allMdx.nodes.map((node, index) => (
-              <Accordion.Item eventKey={index} key={node.id}>
-                <Accordion.Header>
-                  <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
-                  </Accordion.Header>
-                <Accordion.Body>
-                    <MDXRenderer>
-                      {node.body}
-                    </MDXRenderer>
-                  </Accordion.Body>
-              </Accordion.Item>
-            ))
-          }
-        </Accordion>
-      </Container>
+
+      <div style={{ display: "grid" }}>
+        <StaticImage 
+          style={{
+            gridArea: "1/1",
+          }}
+          layout="fullWidth"
+          alt="Dana campaigning"
+          src={"../images/community-garden-1.jpeg"}
+        />
+        <div
+          style={{
+            gridArea: "1/1",
+            position: "relative",
+            display: "grid",
+          }}
+        >
+          <Container>
+            <h1>Events</h1>
+            <Accordion defaultActiveKey="0">
+              {
+                data.allMdx.nodes.map((node, index) => (
+                  <Accordion.Item eventKey={index} key={node.id}>
+                    <Accordion.Header>
+                      <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
+                      </Accordion.Header>
+                    <Accordion.Body>
+                        <MDXRenderer>
+                          {node.body}
+                        </MDXRenderer>
+                      </Accordion.Body>
+                  </Accordion.Item>
+                ))
+              }
+            </Accordion>
+          </Container>
+        </div>
+      </div>
+
     </div>
   )
 }
