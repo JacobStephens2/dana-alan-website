@@ -47,7 +47,7 @@ const FosteringOurFuture = ({ data }) => {
             <h2>Open Space</h2>
             <p>Work with our Open Space Review Board as well as our residents to use our designated open space funds wisely in order to increase our property values, lower our tax burden, and benefit the health of the environment and the quality of life of our&nbsp;residents.</p>
             <p>By continuing to conserve our land we reduce the congestion on our roads and increase our personal health and welfare. Protected open space improves the quality of life for all of&nbsp;us!</p>
-            <StaticImage src="../images/fostering-our-future/open-space-birchrun-road-2x3.jpeg" alt="Landscape view at Birchrun road" placeholder="blurred" />
+            <StaticImage src="../images/fostering-our-future/open-space-birchrun-road-2x3-expanded.jpeg" alt="Landscape view at Birchrun road" placeholder="blurred" />
 
             <h2>Diversity and Inclusion</h2>
             <p>We need to invite diverse and younger voices into the local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p>

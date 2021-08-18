@@ -24,7 +24,7 @@ p {
 }
 
 a {
-  color: $tertiary-color;
+  color: $primary-color;
 }
 
 .header {
@@ -87,6 +87,12 @@ a.nav-link.menu-donate {
   background-color: $white !important;
 }
 
+@include media-breakpoint-down(lg) {
+  .navbar-nav .nav-link {
+    padding-left: 1rem;
+  }
+}
+
 // Buttons
 
 .btn {
@@ -120,6 +126,10 @@ a.nav-link.menu-donate {
 
 .fostering-page h2:first-of-type {
   margin-top: 0;
+}
+
+.fostering-page .gatsby-image-wrapper:last-of-type {
+  margin-bottom: 1.7rem;
 }
 
 .fostering-page h2 {

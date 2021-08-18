@@ -25,6 +25,7 @@ const Donate = ({ data }) => {
         <StaticImage 
           src="../images/horse-1-cropped.jpg" 
           alt="Dana Alan horseback riding"
+          placeholder="blurred"
         />
       </Container>
 
