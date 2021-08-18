@@ -116,6 +116,11 @@ a.nav-link.menu-donate {
   background: none;
 }
 
+.background-container {
+  display: grid;
+  height: 100vh;
+}
+
 .events-body h1 {
   color: $white;
   margin-top: 2rem;

@@ -16,7 +16,7 @@ const Events = ({ data }) => {
       </Helmet>
       <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
 
-      <div style={{ display: "grid" }}>
+      <div className="background-container">
         <StaticImage 
           style={{
             gridArea: "1/1",
