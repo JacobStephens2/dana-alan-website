@@ -16,7 +16,7 @@ const Home = ({ data }) => {
       <Carousel fade>
         {
           data.allMdx.nodes.map((node) => (
-            <Carousel.Item className={node.frontmatter.classTitle} key={node.id}>
+            <Carousel.Item key={node.id}>
               <Carousel.Caption>
                 <h1>
                   <MDXRenderer>
@@ -29,7 +29,7 @@ const Home = ({ data }) => {
         }
       </Carousel>
       <StaticImage 
-        src="../images/tent-dana.jpg" 
+        src="../images/dana-alan-headshot.jpg" 
         alt="Dana campaigning"
       />
     </div>

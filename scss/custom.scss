@@ -18,11 +18,16 @@ p {
 }
 
 .carousel-item {
-  min-height: 300px;
+  min-height: 250px;
 }
 
 .carousel-caption {
-  bottom: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .carousel-indicators [data-bs-target] {
