@@ -136,6 +136,17 @@ a.nav-link.menu-donate {
   margin-top: 1.7rem;
 }
 
+.fostering-page .col {
+  display: flex;
+  align-items: center;
+}
+
+@include media-breakpoint-up(md) {
+  .fostering-page h1 {
+    margin-bottom: 1.3rem;
+  }
+}
+
 // Accordion
 
 // scss-docs-start accordion-variables
