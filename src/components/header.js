@@ -4,11 +4,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import '../../scss/custom.scss';
 import { Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import { StaticImage } from 'gatsby-plugin-image'
+
+
+const shortcodes = { StaticImage }
 
 const Header = ({ pageTitle }) => {
   return (
     <div>
-      <title>{pageTitle}</title>
+		<MDXProvider components={shortcodes}></MDXProvider>
+		<title>{pageTitle}</title>
 		<Navbar bg="light" expand="lg">
 			<Container>
 				<Navbar.Brand>

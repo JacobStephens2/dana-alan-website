@@ -3,10 +3,11 @@
 $primary-color: #002447;
 $secondary-color: #febe10;
 $tertiary-color: #4abbe8;
-$faded-black: rgba(0, 0, 0, 0.4);
-$moderate-black: rgba(0, 0, 0, 0.9);
-$white: #ffffff;
+$black-light: rgba(0, 0, 0, 0.4);
+$black-moderate: rgba(0, 0, 0, 0.7);
+$black-heavy: rgba(0, 0, 0, 0.9);
 $black: #000000;
+$white: #ffffff;
 $border-width: 2px;
 
 // General
@@ -24,6 +25,12 @@ p {
 
 a {
   color: $tertiary-color;
+}
+
+.header {
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
 }
 
 // Carousel
@@ -52,12 +59,6 @@ a {
   display: none;
 }
 
-.homepage-header {
-  margin-top: 50px;
-  justify-content: center;
-  display: flex;
-}
-
 // Menu
 
 .navbar a {
@@ -73,13 +74,13 @@ a.active {
 }
 
 a.nav-link.menu-donate.active {
-  border: $border-width solid $moderate-black;
+  border: $border-width solid $black-heavy;
 }
 
 a.nav-link.menu-donate {
   background-color: transparent;
   border-radius: 0.25rem;
-  border: $border-width solid $faded-black;
+  border: $border-width solid $black-light;
 }
 
 .bg-light {
@@ -97,7 +98,8 @@ a.nav-link.menu-donate {
 // Events page
 
 .events-background {
-  background: url(../src/images/dog-walk-full.jpg) no-repeat center center fixed;
+  background: url(../src/images/community-garden-1.jpeg) no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -111,6 +113,17 @@ a.nav-link.menu-donate {
 .events-body h1 {
   color: $white;
   margin-top: 2rem;
+  text-shadow: 2px 2px 4px $black-moderate;
+}
+
+// Fostering Our Future Page
+
+.fostering-page h2:first-of-type {
+  margin-top: 0;
+}
+
+.fostering-page h2 {
+  margin-top: 1.7rem;
 }
 
 // Accordion

@@ -10,13 +10,13 @@ const Home = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
-      <Container className="homepage-header">
+      <Container className="header">
         <h2>As West Vincent Township Supervisor, Dana Alan will</h2>
       </Container>
       <Carousel fade>
         {
           data.allMdx.nodes.map((node) => (
-            <Carousel.Item key={node.id}>
+            <Carousel.Item className={node.frontmatter.classTitle} key={node.id}>
               <Carousel.Caption>
                 <h1>
                   <MDXRenderer>

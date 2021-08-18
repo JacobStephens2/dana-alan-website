@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { StaticImage } from 'gatsby-plugin-image'
 
 
 const Donate = ({ data }) => {
@@ -20,6 +21,13 @@ const Donate = ({ data }) => {
           </Col>
         </Row>
       </Container>
+      <Container>
+        <StaticImage 
+          src="../images/horse-1-cropped.jpg" 
+          alt="Dana Alan horseback riding"
+        />
+      </Container>
+
     </div>
   )
 }

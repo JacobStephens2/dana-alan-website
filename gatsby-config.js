@@ -21,7 +21,7 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       }
     },
-    "gatsby-plugin-mdx",
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
