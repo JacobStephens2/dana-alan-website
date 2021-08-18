@@ -17,18 +17,10 @@ const Header = ({ pageTitle }) => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="me-auto">
-					<Nav.Link>
-						<Link to="/about" className="menu-item" activeClassName="active">About</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/fostering-our-future" className="menu-item" activeClassName="active">Fostering Our Future</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/events" className="menu-item" activeClassName="active">Events</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/donate" className="menu-item" activeClassName="active">Donate</Link>
-					</Nav.Link>
+					<Link to="/about" className="nav-link" activeClassName="active">About</Link>
+					<Link to="/fostering-our-future" className="nav-link" activeClassName="active">Fostering Our Future</Link>
+					<Link to="/events" className="nav-link" activeClassName="active">Events</Link>
+					<Link to="/donate" className="nav-link" activeClassName="active">Donate</Link>
 				</Nav>
 				</Navbar.Collapse>
 			</Container>
