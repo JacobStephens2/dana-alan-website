@@ -14,10 +14,10 @@ const shortcodes = { StaticImage }
 const Header = ({ pageTitle }) => {
   return (
     <div>
-		<Helmet
-			lang="en"
-		>
+		<Helmet>
+			<html lang="en" amp />
 			<meta charSet="utf-8" />
+			<meta name="description" content="Information about Dana Alan's 2021 campaign for West Vincent Township Supervisor" />
 			<title>Dana Alan for West Vincent Township Supervisor Campaign Site</title>
 			<link rel="canonical" href="https://danaalan.gatsbyjs.io" />
 			<script type="application/ld+json">

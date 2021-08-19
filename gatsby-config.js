@@ -80,9 +80,14 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: ['https://use.typekit.net'],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
@@ -96,9 +101,12 @@ module.exports = {
         background_color: `#4abbe8`,
         theme_color: `#002447`,
         display: `standalone`,
-        icon: `src/images/favicon.png`,
         lang: `en`,
-        cache_busting_mode: 'none'
+        cache_busting_mode: `none`,
+        icon: `src/images/favicon.png`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     {

@@ -1073,7 +1073,7 @@
     "core-js-pure" "^3.16.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.13.17", "@babel/runtime@^7.13.8", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.13.17", "@babel/runtime@^7.13.8", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   "integrity" "sha512-twj3L8Og5SaCRCErB4x4ajbvBIVV77CGeFglHpeg5WC5FF8TZzBWXtTJ4MqaD9QszLYTtr+IsaAL2rEUevb+eg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.14.8.tgz"
   "version" "7.14.8"
@@ -6574,6 +6574,13 @@
     "gatsby-telemetry" "^2.11.0"
     "globby" "^11.0.3"
     "lodash" "^4.17.21"
+
+"gatsby-plugin-preconnect@^1.2.1":
+  "integrity" "sha512-8gEjLdaa3kOFEOvY23YcdKW8PGAu2SHffJkG1tCiTkkTR5r6oGawqfbvRI48H4UHZdR1vgOv0iPkB7OSRG2hZg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-preconnect/-/gatsby-plugin-preconnect-1.2.1.tgz"
+  "version" "1.2.1"
+  dependencies:
+    "@babel/runtime" "^7.4.3"
 
 "gatsby-plugin-react-helmet@^4.11.0":
   "integrity" "sha512-FTEneTpt2IngYRVXrJXIHtQFnFt6THu7JH/9aAtq51hPVIglrDVBsDnPgRfALjNzJfKt0OyNmpoLEXOTFLpSGg=="
