@@ -27,6 +27,9 @@ const Donate = ({ data }) => {
           alt="Dana Alan horseback riding"
           placeholder="blurred"
         />
+        <figcaption>
+          At a young age, Dana rode her first pony, Gray, in West Vincent Township at Ludwig's horse&nbsp;show.
+        </figcaption>
       </Container>
 
     </div>

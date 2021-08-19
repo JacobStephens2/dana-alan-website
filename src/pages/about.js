@@ -19,7 +19,7 @@ const About = ({ data }) => {
               {data.mdx.body}
             </MDXRenderer>
             <Button href="mailto:danaalanWVT@gmail.com" variant="info">
-              Email Dana
+              Email Dana at danaalanWVT@gmail.com
             </Button>
           </Col>
           <Col>

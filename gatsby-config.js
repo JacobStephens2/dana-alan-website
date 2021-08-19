@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -42,5 +46,11 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: { id: process.env.ADOBE_TYPEKIT_KEY}
+      }
+    }
   ],
 }

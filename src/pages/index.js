@@ -10,31 +10,43 @@ const Home = ({ data }) => {
   return (
     <div>
       <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
-      <Container className="header">
-        <h2>As West Vincent Township Supervisor, Dana Alan will</h2>
-      </Container>
-      <Carousel fade>
-        {
-          data.allMdx.nodes.map((node) => (
-            <Carousel.Item className={node.frontmatter.classTitle} key={node.id}>
-              <Carousel.Caption>
-                <h1>
-                  <MDXRenderer>
-                    {node.body}
-                  </MDXRenderer>
-                </h1>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))
-        }
-      </Carousel>
-      <Container>
+      <div className="home-background-container">
         <StaticImage 
-          src="../images/dana-alan-headshot.jpg" 
-          alt="Dana campaigning"
+          style={{
+            gridArea: "1/1",
+          }}
+          layout="fullWidth"
+          alt="Dana headshot photo"
+          src={"../images/dana-alan-headshot.jpg"}
         />
-      </Container>
+        <div
+          style={{
+            gridArea: "1/1",
+            position: "relative",
+            display: "grid",
+          }}
+        >
+          <Carousel fade>
+          {
+            data.allMdx.nodes.map((node) => (
+              <Carousel.Item className={node.frontmatter.classTitle} key={node.id}>
+                <Carousel.Caption>
+                  <h1>
+                    As West Vincent Township Supervisor, Dana Alan will
+                    <MDXRenderer>
+                      {node.body}
+                    </MDXRenderer>
+                  </h1>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))
+          }
+        </Carousel>
+        </div>
+      </div>
+
     </div>
+    
   )
 }
 

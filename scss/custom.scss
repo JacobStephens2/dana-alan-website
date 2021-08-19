@@ -1,30 +1,50 @@
+// CONTENTS
+// General
+// Menu // Navbar
+// Home page
+//  Carousel
+// About page
+//  Buttons
+// Fostering Our Future Page
+// Events page
+//  Accordion
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// General
 
 $primary-color: #002447;
 $secondary-color: #febe10;
 $tertiary-color: #4abbe8;
 $black-light: rgba(0, 0, 0, 0.4);
-$black-moderate: rgba(0, 0, 0, 0.7);
+$black-moderate: rgba(0, 0, 0, 0.75);
 $black-heavy: rgba(0, 0, 0, 0.9);
 $black: #000000;
 $white: #ffffff;
 $border-width: 2px;
-
-// General
+$text-shadow: 2px 2px 4px $black-moderate;
 
 body {
   background-color: none;
+  padding-top: 75px;
 }
 
 h1,
 h2,
 h3,
-p {
-  color: $primary-color;
-}
-
+p,
 a {
   color: $primary-color;
+  font-family: proxima-nova, sans-serif;
+}
+
+.navbar-brand a.menu-item {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+figcaption {
+  margin-top: 0.35rem;
 }
 
 .header {
@@ -33,36 +53,20 @@ a {
   display: flex;
 }
 
-// Carousel
-
-.carousel-item {
-  min-height: 250px;
-}
-
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  left: 7%;
-  right: 7%;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: $primary-color;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-  display: none;
-}
-
-// Menu
+// Menu // Navbar
 
 .navbar a {
   color: $black;
+}
+
+@include media-breakpoint-up(md) {
+  .navbar a {
+    letter-spacing: 2px;
+  }
+}
+
+.navbar-nav a {
+  font-size: 0.9rem;
 }
 
 a.menu-item {
@@ -73,18 +77,29 @@ a.active {
   color: $primary-color;
 }
 
-a.nav-link.menu-donate.active {
-  border: $border-width solid $black-heavy;
+a.nav-link {
+  text-transform: uppercase;
 }
 
-a.nav-link.menu-donate {
-  background-color: transparent;
-  border-radius: 0.25rem;
-  border: $border-width solid $black-light;
+@include media-breakpoint-up(md) {
+  a.nav-link.menu-donate.active {
+    border: $border-width solid $black-heavy;
+  }
+  a.nav-link.menu-donate {
+    background-color: transparent;
+    border-radius: 300px;
+    border: $border-width solid $black-light;
+    margin-left: 0.45rem;
+  }
 }
 
 .bg-light {
   background-color: $white !important;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 @include media-breakpoint-down(lg) {
@@ -93,12 +108,89 @@ a.nav-link.menu-donate {
   }
 }
 
+// Home page
+
+.home-background-container {
+  display: grid;
+}
+
+.home-background-container .gatsby-image-wrapper {
+  max-height: 91vh;
+}
+
+// Carousel
+
+.carousel-item {
+  min-height: 87vh;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  left: 5%;
+  right: 5%;
+}
+
+.carousel-caption h1 {
+  color: $white;
+  text-shadow: $text-shadow;
+}
+.carousel-caption p {
+  color: $white;
+  text-shadow: $text-shadow;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: $white;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
+}
+
+// About Page
+
 // Buttons
 
 .btn {
   margin-bottom: 1.3rem;
   background-color: $tertiary-color;
   border-color: $tertiary-color;
+  border-radius: 300px;
+}
+
+// Fostering Our Future Page
+
+div.first-image.gatsby-image-wrapper {
+  margin-top: 0;
+}
+
+.fostering-page .gatsby-image-wrapper {
+  margin-top: 1.7rem;
+}
+
+.fostering-page h2 {
+  margin-top: 1rem;
+}
+
+.fostering-page .col {
+  display: flex;
+  align-items: center;
+}
+
+.fostering-page h1 {
+  margin-bottom: 0.7rem;
+}
+
+@include media-breakpoint-up(md) {
+  .fostering-page h1 {
+    margin-bottom: 1.3rem;
+  }
 }
 
 // Events page
@@ -124,32 +216,7 @@ a.nav-link.menu-donate {
 .events-body h1 {
   color: $white;
   margin-top: 2rem;
-  text-shadow: 2px 2px 4px $black-moderate;
-}
-
-// Fostering Our Future Page
-
-.fostering-page h2:first-of-type {
-  margin-top: 0;
-}
-
-.fostering-page .gatsby-image-wrapper:last-of-type {
-  margin-bottom: 1.7rem;
-}
-
-.fostering-page h2 {
-  margin-top: 1.7rem;
-}
-
-.fostering-page .col {
-  display: flex;
-  align-items: center;
-}
-
-@include media-breakpoint-up(md) {
-  .fostering-page h1 {
-    margin-bottom: 1.3rem;
-  }
+  text-shadow: $text-shadow;
 }
 
 // Accordion
