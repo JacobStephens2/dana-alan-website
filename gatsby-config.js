@@ -78,6 +78,34 @@ module.exports = {
       options: {
         typekit: { id: process.env.ADOBE_TYPEKIT_KEY}
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Dana Alan`,
+        short_name: `Dana`,
+        description: `The campaign website for Dana Alan for West Vincent Township Supervisor`,
+        start_url: `/`,
+        background_color: `#4abbe8`,
+        theme_color: `#002447`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+        lang: `en`,
+        cache_busting_mode: 'none'
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`],
+      },
+    },
   ],
 }

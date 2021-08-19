@@ -15,14 +15,27 @@ const Header = ({ pageTitle }) => {
   return (
     <div>
 		<Helmet
-			script={[{
-				type: 'text/javascript',
-				innerHTML: '(function(d){var s = d.createElement("script");s.setAttribute("data-account", "qBIAXSvfU7");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)'
-			}]}	
-			noscript={[{
-				innerHTML: 'Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>'
-			}]}	
-		/>
+			lang="en"
+		>
+			<meta charSet="utf-8" />
+			<title>Dana Alan for West Vincent Township Supervisor Campaign Site</title>
+			<link rel="canonical" href="https://danaalan.gatsbyjs.io" />
+			<script type="application/ld+json">
+				{`
+					{
+					"@context": "https://danaalan.gatsbyjs.io",
+					"@type": "Individual",
+					"url": "https://danaalan.gatsbyjs.io",
+					"name": "Dana Alan for West Vincent Township Supervisor Campaign Site",
+					"contactPoint": {
+						"@type": "ContactPoint",
+						"telephone": "+1-484-356-7773",
+						"contactType": "Customer Support"
+					}
+					}
+				`}
+			</script>
+		</Helmet>
 
 		<MDXProvider components={shortcodes}></MDXProvider>
 		<title>{pageTitle}</title>
