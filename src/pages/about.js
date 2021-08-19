@@ -1,5 +1,6 @@
 import React from "react"
 import Header from '../components/header'
+import Footer from '../components/footer'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Container from 'react-bootstrap/Container'
@@ -18,9 +19,6 @@ const About = ({ data }) => {
             <MDXRenderer>
               {data.mdx.body}
             </MDXRenderer>
-            <Button href="mailto:danaalanWVT@gmail.com" variant="info">
-              Email Dana at danaalanWVT@gmail.com
-            </Button>
           </Col>
           <Col>
             <StaticImage
@@ -28,10 +26,13 @@ const About = ({ data }) => {
               alt="Dana Alan headshot"
               placeholder="blurred"
               layout="fixed"
+              className="about-image"
             />
           </Col>
         </Row>
       </Container>
+      <Footer />
+
     </div>
   )
 }

@@ -6,9 +6,11 @@ import Accordion from 'react-bootstrap/Accordion'
 import Container from 'react-bootstrap/Container'
 import { Helmet } from "react-helmet";
 import { StaticImage } from 'gatsby-plugin-image'
+import Footer from '../components/footer'
 
 
-const Events = ({ data }) => {
+
+const Events = ({ data }) => {  
   return (
     <div>
       <Helmet>
@@ -42,10 +44,10 @@ const Events = ({ data }) => {
                       <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
                       </Accordion.Header>
                     <Accordion.Body>
-                        <MDXRenderer>
-                          {node.body}
-                        </MDXRenderer>
-                      </Accordion.Body>
+                      <MDXRenderer>
+                        {node.body}
+                      </MDXRenderer>
+                    </Accordion.Body>
                   </Accordion.Item>
                 ))
               }
@@ -53,6 +55,7 @@ const Events = ({ data }) => {
           </Container>
         </div>
       </div>
+      <Footer />
 
     </div>
   )

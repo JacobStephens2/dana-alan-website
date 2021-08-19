@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { StaticImage } from 'gatsby-plugin-image'
+import Footer from '../components/footer'
 
 const FosteringOurFuture = ({ data }) => {
   return (
@@ -33,6 +34,13 @@ const FosteringOurFuture = ({ data }) => {
         </Row>
 
         <Row>
+          <Col><StaticImage src="../images/fostering-our-future/diversity-ballots-full-AdobeStock_340530102_Preview.jpeg" alt="Dana profile" placeholder="blurred" /></Col>
+          <Col sm={12} md={6} lg={7} xl={6}>
+            <h2>Diversity and Inclusion</h2>
+            <p>We need to invite diverse and younger voices into the local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p></Col>
+        </Row>
+
+        <Row>
           <Col><StaticImage src="../images/fostering-our-future/open-space-birchrun-road-2x3-expanded.jpeg" alt="Landscape view at Birchrun road" placeholder="blurred" /></Col>
           <Col sm={12} md={6} lg={7} xl={6}>
             <h2>Open Space</h2>
@@ -52,13 +60,6 @@ const FosteringOurFuture = ({ data }) => {
           <Col sm={12} md={6} lg={7} xl={6}>
             <h2>Parks and Recreation</h2>
             <p>Work with our Parks & Recreation Commission as well as our residents to enhance public use and enjoyment of our beautiful parks and work with our Supervisors and township manager to continue to find grants to fund&nbsp;improvements.</p></Col>
-        </Row>
-
-        <Row>
-          <Col><StaticImage src="../images/fostering-our-future/diversity-ballots-full-AdobeStock_340530102_Preview.jpeg" alt="Dana profile" placeholder="blurred" /></Col>
-          <Col sm={12} md={6} lg={7} xl={6}>
-            <h2>Diversity and Inclusion</h2>
-            <p>We need to invite diverse and younger voices into the local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p></Col>
         </Row>
 
         <Row>
@@ -86,6 +87,8 @@ const FosteringOurFuture = ({ data }) => {
         </Row>
             
       </Container>
+      <Footer />
+
     </div>
   )
 }

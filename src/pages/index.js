@@ -1,9 +1,9 @@
 import React from "react"
 import Header from '../components/header'
+import Footer from '../components/footer'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Carousel from 'react-bootstrap/Carousel'
-import Container from 'react-bootstrap/Container'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Home = ({ data }) => {
@@ -44,7 +44,7 @@ const Home = ({ data }) => {
         </Carousel>
         </div>
       </div>
-
+      <Footer />
     </div>
     
   )

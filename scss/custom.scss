@@ -1,10 +1,9 @@
 // CONTENTS
 // General
-// Menu // Navbar
+// Menu // Header // Navbar
+// Footer
 // Home page
 //  Carousel
-// About page
-//  Buttons
 // Fostering Our Future Page
 // Events page
 //  Accordion
@@ -33,7 +32,8 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+button {
   color: $primary-color;
   font-family: proxima-nova, sans-serif;
 }
@@ -53,7 +53,7 @@ figcaption {
   display: flex;
 }
 
-// Menu // Navbar
+// Menu // Header // Navbar
 
 .navbar a {
   color: $black;
@@ -91,6 +91,12 @@ a.nav-link {
     border: $border-width solid $black-light;
     margin-left: 0.45rem;
   }
+  a.nav-link.menu-donate:hover {
+    border: $border-width solid $black-moderate !important;
+  }
+  a.nav-link.menu-donate:focus {
+    border: $border-width solid $black-moderate !important;
+  }
 }
 
 .bg-light {
@@ -106,6 +112,32 @@ a.nav-link {
   .navbar-nav .nav-link {
     padding-left: 1rem;
   }
+}
+
+// Footer
+
+.footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: transparent !important;
+  border-radius: 300px;
+  border: $border-width solid $black-light !important;
+  color: $black-moderate;
+  border-radius: 300px;
+}
+
+.footer-button:focus {
+  border: $border-width solid $black-moderate !important;
+}
+.footer-button:hover {
+  border: $border-width solid $black-moderate !important;
+}
+
+.copyright {
+  display: inline;
 }
 
 // Home page
@@ -151,17 +183,6 @@ a.nav-link {
 .carousel-control-next,
 .carousel-control-prev {
   display: none;
-}
-
-// About Page
-
-// Buttons
-
-.btn {
-  margin-bottom: 1.3rem;
-  background-color: $tertiary-color;
-  border-color: $tertiary-color;
-  border-radius: 300px;
 }
 
 // Fostering Our Future Page
@@ -221,6 +242,11 @@ div.first-image.gatsby-image-wrapper {
 
 // Accordion
 
+.accordion-body .gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  max-width: 500px !important;
+}
+
 // scss-docs-start accordion-variables
 $accordion-padding-y: 1rem !default;
 $accordion-padding-x: 1.25rem !default;
@@ -266,3 +292,9 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 }
 
 // scss-docs-end accordion-variables
+
+// About Page
+
+.about-image {
+  margin-top: 1rem;
+}

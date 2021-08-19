@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { StaticImage } from 'gatsby-plugin-image'
+import Footer from '../components/footer'
+
 
 
 const Donate = ({ data }) => {
@@ -31,6 +33,7 @@ const Donate = ({ data }) => {
           At a young age, Dana rode her first pony, Gray, in West Vincent Township at Ludwig's horse&nbsp;show.
         </figcaption>
       </Container>
+      <Footer />
 
     </div>
   )
