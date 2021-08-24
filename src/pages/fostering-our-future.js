@@ -13,7 +13,7 @@ const FosteringOurFuture = ({ data }) => {
       <Header pageTitle="Fostering Our Future | Dana Alan for Supervisor of West Vincent Township" />
       <Container className="top-space fostering-page">
         
-        <h1>Fostering Our Future&nbsp;Through:</h1>
+        <h1>Fostering Our Future</h1>
 
         <Row>
           <Col><StaticImage className="first-image" src="../images/fostering-our-future/sustainability-township-bldg-and-yatch-club-2x3.jpeg" alt="Township building with solar panels" placeholder="blurred" /></Col>

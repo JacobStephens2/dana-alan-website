@@ -10,8 +10,6 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// General
-
 $primary-color: #002447;
 $secondary-color: #febe10;
 $tertiary-color: #4abbe8;
@@ -23,8 +21,16 @@ $white: #ffffff;
 $border-width: 2px;
 $text-shadow: 2px 2px 4px $black-moderate;
 
+// General
+
 @font-face {
+  font-family: "Proxima Nova";
+  src: url(https://use.typekit.net/nih0tpx.css);
   font-display: swap;
+}
+
+li {
+  font-size: 1.5rem;
 }
 
 body {
@@ -42,14 +48,37 @@ button {
   font-family: proxima-nova, sans-serif;
 }
 
+figcaption {
+  margin-top: 0.35rem;
+}
+
 .navbar-brand a.menu-item {
   text-transform: uppercase;
   line-height: 1;
 }
 
-figcaption {
-  margin-top: 0.35rem;
+.bar {
+  background-color: $primary-color;
+  color: $white;
+  max-width: 100vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
+.bar h1 {
+  color: $white;
+}
+
+@include media-breakpoint-down(md) {
+  li {
+    font-size: 1.2rem;
+  }
+  .bar h1 {
+    font-size: 1.5rem;
+  }
+}
+
+// Menu // Header // Navbar
 
 .header {
   margin-top: 50px;
@@ -57,7 +86,10 @@ figcaption {
   display: flex;
 }
 
-// Menu // Header // Navbar
+.me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
 
 .navbar a {
   color: $black;
@@ -145,49 +177,6 @@ a.nav-link {
 }
 
 // Home page
-
-.home-background-container {
-  display: grid;
-}
-
-.home-background-container .gatsby-image-wrapper {
-  max-height: 91vh;
-}
-
-// Carousel
-
-.carousel-item {
-  min-height: 87vh;
-}
-
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-30%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  left: 5%;
-  right: 5%;
-}
-
-.carousel-caption h1 {
-  color: $white;
-  text-shadow: $text-shadow;
-}
-.carousel-caption p {
-  color: $white;
-  text-shadow: $text-shadow;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: $white;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-  display: none;
-}
 
 // Fostering Our Future Page
 
