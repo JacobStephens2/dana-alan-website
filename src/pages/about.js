@@ -10,9 +10,20 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const About = ({ data }) => {
   return (
-    <div>
+    <div className="about-page">
       <Header pageTitle="About | Dana Alan for Supervisor of West Vincent Township" />
-      <Container className="top-space">
+
+      <Container className="bar">
+        <Container>
+        <h1>About Dana Alan</h1>
+        </Container>
+      </Container>
+
+      <Container className="top-space biography">
+        <Col md={11} lg={10} xl={9}>
+          <blockquote>“The most important single ingredient in the formula of success is knowing how to get along with&nbsp;people.”&thinsp;</blockquote>
+          <cite>Theodore Roosevelt (26th President,&nbsp;USA)</cite>
+        </Col>
         <Row>
           <Col md={10} lg={7} xl={6}>
             <MDXRenderer>
@@ -21,15 +32,41 @@ const About = ({ data }) => {
           </Col>
           <Col>
             <StaticImage
-              src="../images/dana-alan-linkedin-profile-picture.jpg"
-              alt="Dana Alan headshot"
+              src="../images/fostering-our-future/financial-stability-dana-profile-2x3.jpg"
+              alt="Photo of Dana Alan on a bridge"
               placeholder="blurred"
-              layout="fixed"
+              layout="constrained"
               className="about-image"
             />
           </Col>
         </Row>
       </Container>
+
+      <Container>
+        <Col md={10} lg={9} xl={8}>
+          <h2>Dana Alan is invested in our&nbsp;township.</h2>
+
+          <p>With a career spanning over 25 years as a sales, marketing, and advertising professional, Dana Alan will find solutions to complex problems, hold officials to account, and maintain fiscal responsibility. She will be working for ALL OF&nbsp;US.</p>
+
+          <p><strong>A 22-year resident of West Vincent.</strong> Dana Alan is committed to preserving the beautiful landscapes, promoting only sustainable development, and saying “no” to new township&nbsp;taxes.</p>
+
+          <p><strong>A life-long creative problem-solver.</strong> Dana Alan will work to ensure that every voice is heard and&nbsp;respected.</p>
+
+          <p><strong>A history of community involvement.</strong> From the library to the PTA to the Community Garden and Community Day, Dana Alan has consistently worked to foster community in West&nbsp;Vincent.</p>
+
+          <h2>Dana Alan is committed to this&nbsp;community.</h2>
+
+          <p>Dana and her husband, Ken, have lived in West Vincent for 22 years. Their two children, Tristan and Tia, went to Owen J. Roberts Schools from kindergarten through high school graduation. Throughout this time, Dana has worked and volunteered&nbsp;locally.</p>
+
+          <ul>
+            <li>Dana holds a BS in Business Administration from Saint Joseph’s&nbsp;University.</li>
+            <li>Dana is a board member of the Friends of the Henrietta Hankin Branch Library and a member of the Community&nbsp;Garden.</li>
+            <li>Dana regularly attends and speaks up at Supervisor meetings, as well as Parks & Recreation, EAC, Planning Commission, and Open&nbsp;Space.</li>
+            <li>Dana has a consistent history of volunteering here in West Vincent. While her children were in school, Dana was on the PTA and helped out with the band and both the Boy and Girl Scouts. She has organized and worked at various school fundraisers/auctions and community events, such as Community&nbsp;Day.</li>
+          </ul>
+        </Col>
+      </Container>
+
       <Footer />
 
     </div>

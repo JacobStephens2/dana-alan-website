@@ -17,6 +17,12 @@ const Events = ({ data }) => {
         <body class="events-body" />
       </Helmet>
       <Header pageTitle="Events | Dana Alan for Supervisor of West Vincent Township" />
+      
+      <Container className="bar">
+        <Container>
+        <h1>Events</h1>
+        </Container>
+      </Container>
 
       <div className="background-container">
         <StaticImage 
@@ -34,8 +40,7 @@ const Events = ({ data }) => {
             display: "grid",
           }}
         >
-          <Container>
-            <h1>Events</h1>
+          <Container className="accordion-container">
             <Accordion defaultActiveKey="0">
               {
                 data.allMdx.nodes.map((node, index) => (
@@ -43,7 +48,7 @@ const Events = ({ data }) => {
                     <Accordion.Header>
                       <div dangerouslySetInnerHTML={{ __html: node.frontmatter.title}}></div>
                       </Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Body className={node.frontmatter.classTitle}>
                       <MDXRenderer>
                         {node.body}
                       </MDXRenderer>
@@ -73,6 +78,7 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "MMMM")
+          classTitle
         }
       }
     }

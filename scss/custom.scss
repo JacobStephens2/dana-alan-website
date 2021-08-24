@@ -13,6 +13,8 @@
 $primary-color: #002447;
 $secondary-color: #febe10;
 $tertiary-color: #4abbe8;
+$tertiary-color-light: rgba(74, 187, 232, 0.07);
+$black-very-light: rgba(0, 0, 0, 0.2);
 $black-light: rgba(0, 0, 0, 0.4);
 $black-moderate: rgba(0, 0, 0, 0.75);
 $black-heavy: rgba(0, 0, 0, 0.9);
@@ -29,13 +31,28 @@ $text-shadow: 2px 2px 4px $black-moderate;
   font-display: swap;
 }
 
+blockquote {
+  font-style: italic;
+  margin: 0;
+}
+
+cite {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.75rem;
+  margin: 0.3rem 0 0;
+}
+
 li {
   font-size: 1.5rem;
 }
 
+ul {
+  padding-left: 1rem;
+}
+
 body {
   background-color: none;
-  padding-top: 75px;
 }
 
 h1,
@@ -43,7 +60,10 @@ h2,
 h3,
 p,
 a,
-button {
+button,
+li,
+cite,
+blockquote {
   color: $primary-color;
   font-family: proxima-nova, sans-serif;
 }
@@ -70,6 +90,9 @@ figcaption {
 }
 
 @include media-breakpoint-down(md) {
+  ul {
+    padding-left: 1.5rem;
+  }
   li {
     font-size: 1.2rem;
   }
@@ -155,33 +178,77 @@ a.nav-link {
 .footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: $white;
 }
 
 .btn {
   background-color: transparent !important;
   border-radius: 300px;
-  border: $border-width solid $black-light !important;
-  color: $black-moderate;
+  border: $border-width solid $white !important;
+  color: $white;
   border-radius: 300px;
 }
 
 .footer-button:focus {
-  border: $border-width solid $black-moderate !important;
+  border: $border-width solid $white !important;
 }
 .footer-button:hover {
-  border: $border-width solid $black-moderate !important;
+  border: $border-width solid $white !important;
+}
+
+.footer p {
+  color: $white;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.footer p:first-of-type {
+  color: $white;
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+}
+
+.footer.bar {
+  margin-bottom: 0 !important;
 }
 
 .copyright {
   display: inline;
+  color: $white;
 }
 
 // Home page
+
+.home-page-image-container {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.home-page li {
+  color: $white;
+}
+
+.home-page .bar {
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .home-page-image-container {
+    margin-bottom: 1rem;
+  }
+}
 
 // Fostering Our Future Page
 
 div.first-image.gatsby-image-wrapper {
   margin-top: 0;
+}
+
+.fostering-page .container h1 {
+  margin-bottom: 0;
+}
+
+.fostering-page .bar {
+  margin-bottom: 1.7rem;
 }
 
 .fostering-page .gatsby-image-wrapper {
@@ -209,6 +276,16 @@ div.first-image.gatsby-image-wrapper {
 
 // Events page
 
+.background-container img {
+  height: 900px;
+}
+
+@include media-breakpoint-down(md) {
+  .background-container img {
+    height: 1100px;
+  }
+}
+
 .events-background {
   background: url(../src/images/community-garden-1.jpeg) no-repeat center center
     fixed;
@@ -224,57 +301,44 @@ div.first-image.gatsby-image-wrapper {
 
 .background-container {
   display: grid;
-  height: 900px;
 }
 
 .events-body h1 {
   color: $white;
-  margin-top: 2rem;
+  margin: 0;
   text-shadow: $text-shadow;
 }
 
 // Accordion
+
+.accordion-container {
+  margin-top: 1rem;
+}
+
+@include media-breakpoint-down(md) {
+  .accordion-container {
+    min-height: 500px;
+  }
+}
+
+.accordion-item:last-of-type {
+  margin-bottom: 2rem;
+}
 
 .accordion-body .gatsby-resp-image-wrapper {
   margin-left: 0 !important;
   max-width: 500px !important;
 }
 
-// scss-docs-start accordion-variables
-$accordion-padding-y: 1rem !default;
-$accordion-padding-x: 1.25rem !default;
-$accordion-color: $primary-color !default;
-$accordion-bg: $body-bg !default;
-$accordion-border-width: $border-width !default;
-$accordion-border-color: rgba($black, 0.125) !default;
-$accordion-border-radius: $border-radius !default;
-$accordion-inner-border-radius: subtract(
-  $accordion-border-radius,
-  $accordion-border-width
-) !default;
+.oktoberfest .gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  max-width: 350px !important;
+}
 
-$accordion-body-padding-y: $accordion-padding-y !default;
-$accordion-body-padding-x: $accordion-padding-x !default;
-
-$accordion-button-padding-y: $accordion-padding-y !default;
-$accordion-button-padding-x: $accordion-padding-x !default;
-$accordion-button-color: $primary-color !default;
-$accordion-button-bg: $accordion-bg !default;
-$accordion-transition: $btn-transition, border-radius 0.15s ease !default;
-$accordion-button-active-bg: tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color: shade-color($primary, 10%) !default;
-
-$accordion-button-focus-border-color: $input-focus-border-color !default;
-$accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
-
-$accordion-icon-width: 1.25rem !default;
-$accordion-icon-color: $primary-color !default;
-$accordion-icon-active-color: $accordion-button-active-color !default;
-$accordion-icon-transition: transform 0.2s ease-in-out !default;
-$accordion-icon-transform: rotate(-180deg) !default;
-
-$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+.municipal-election .gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  max-width: 350px !important;
+}
 
 .accordion-body p {
   color: $primary-color;
@@ -284,10 +348,50 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
   margin-top: 1rem;
 }
 
-// scss-docs-end accordion-variables
-
 // About Page
+
+.about-page p:first-of-type {
+  margin-top: 1rem;
+}
 
 .about-image {
   margin-top: 1rem;
+}
+
+.about-page .container h1 {
+  margin-bottom: 0;
+}
+
+.about-page .bar {
+  margin-bottom: 1.7rem;
+}
+
+.about-page p:last-of-type {
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .about-page .bar {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.biography {
+  background-color: $tertiary-color-light;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px $black-very-light;
+  padding: 1rem;
+}
+
+.about-page h2:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.about-page li {
+  font-size: 1rem;
+  color: $primary-color;
+}
+
+.about-page li:first-of-type {
+  margin-top: 0.5rem;
 }

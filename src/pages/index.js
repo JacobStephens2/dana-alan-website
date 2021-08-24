@@ -11,26 +11,29 @@ const Home = ({ data }) => {
     <div className="home-page">
       <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
       <div>
-        <StaticImage 
-          layout="fullWidth"
-          alt="Dana headshot photo"
-          src={"../images/dana-alan-headshot.jpg"}
-          className="home-page-image"
-        />
-          <Container className="bar">
-            <Container>
-              <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
-              <ul>
-              {
-                data.allMdx.nodes.map((node) => (
-                        <MDXRenderer>
-                          {node.body}
-                        </MDXRenderer>
-                ))
-              }
-              </ul>
-            </Container>
+        <Container className="justify-content-center home-page-image-container">
+          <StaticImage 
+            layout="constrained"
+            alt="Dana headshot photo"
+            src={"../images/dana-alan-headshot.jpg"}
+            className="home-page-image"
+            height={500}
+          />
+        </Container>
+        <Container className="bar">
+          <Container>
+            <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
+            <ul>
+            {
+              data.allMdx.nodes.map((node) => (
+                      <MDXRenderer>
+                        {node.body}
+                      </MDXRenderer>
+              ))
+            }
+            </ul>
           </Container>
+        </Container>
       </div>
       <Footer />
     </div>

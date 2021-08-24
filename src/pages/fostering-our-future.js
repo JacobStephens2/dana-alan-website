@@ -9,11 +9,15 @@ import Footer from '../components/footer'
 
 const FosteringOurFuture = ({ data }) => {
   return (
-    <div>
+    <div className="fostering-page">
       <Header pageTitle="Fostering Our Future | Dana Alan for Supervisor of West Vincent Township" />
-      <Container className="top-space fostering-page">
-        
+      <Container className="bar">
+        <Container>
         <h1>Fostering Our Future</h1>
+        </Container>
+      </Container>
+
+      <Container className="top-space fostering-page">
 
         <Row>
           <Col><StaticImage className="first-image" src="../images/fostering-our-future/sustainability-township-bldg-and-yatch-club-2x3.jpeg" alt="Township building with solar panels" placeholder="blurred" /></Col>

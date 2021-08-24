@@ -39,7 +39,7 @@ const Header = ({ pageTitle }) => {
 
 		<MDXProvider components={shortcodes}></MDXProvider>
 		<title>{pageTitle}</title>
-		<Navbar fixed="top" bg="light" expand="lg">
+		<Navbar bg="light" expand="lg">
 			<Container>
 				<Navbar.Brand>
 					<Link to="/" className="menu-item" activeClassName="active">
