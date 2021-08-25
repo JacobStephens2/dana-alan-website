@@ -4,36 +4,41 @@ import Footer from '../components/footer'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Home = ({ data }) => {
   return (
     <div className="home-page">
       <Header pageTitle="Home | Dana Alan for Supervisor of West Vincent Township" />
-      <div>
-        <Container className="justify-content-center home-page-image-container">
-          <StaticImage 
-            layout="constrained"
-            alt="Dana headshot photo"
-            src={"../images/dana-alan-headshot.jpg"}
-            className="home-page-image"
-            height={500}
-          />
-        </Container>
-        <Container className="bar">
-          <Container>
-            <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
-            <ul>
-            {
-              data.allMdx.nodes.map((node) => (
-                      <MDXRenderer>
-                        {node.body}
-                      </MDXRenderer>
-              ))
-            }
-            </ul>
-          </Container>
-        </Container>
+      <div className="home-page-body">
+        <Row>
+          <Col md={12} lg={6} className="home-page-image">
+              <StaticImage 
+                layout="constrained"
+                alt="Dana headshot photo"
+                src={"../images/dana-alan-headshot.jpg"}
+                className="home-page-image"
+                />
+          </Col>
+          <Col>
+            <Container className="bar">
+              <Container>
+                <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
+                <ul>
+                {
+                  data.allMdx.nodes.map((node) => (
+                          <MDXRenderer>
+                            {node.body}
+                          </MDXRenderer>
+                  ))
+                }
+                </ul>
+              </Container>
+            </Container>
+          </Col>
+        </Row>
       </div>
       <Footer />
     </div>

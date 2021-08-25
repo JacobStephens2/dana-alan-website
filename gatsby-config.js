@@ -72,6 +72,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-scroll-reveal`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /src/images/svg/ // See below to configure properly
+        }
+      }
+    }
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',

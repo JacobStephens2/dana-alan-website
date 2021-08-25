@@ -2,11 +2,13 @@
 // General
 // Menu // Header // Navbar
 // Footer
-// Home page
+// Home page // Front page
 //  Carousel
 // Fostering Our Future Page
 // Events page
 //  Accordion
+// Donate page
+// Attributions page
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -22,6 +24,10 @@ $black: #000000;
 $white: #ffffff;
 $border-width: 2px;
 $text-shadow: 2px 2px 4px $black-moderate;
+$border-radius: 8px;
+$box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 16px,
+  rgba(71, 63, 79, 0.16) 0px 8px 24px;
+$small-font: 0.75rem;
 
 // General
 
@@ -29,30 +35,6 @@ $text-shadow: 2px 2px 4px $black-moderate;
   font-family: "Proxima Nova";
   src: url(https://use.typekit.net/nih0tpx.css);
   font-display: swap;
-}
-
-blockquote {
-  font-style: italic;
-  margin: 0;
-}
-
-cite {
-  text-transform: uppercase;
-  font-style: normal;
-  font-size: 0.75rem;
-  margin: 0.3rem 0 0;
-}
-
-li {
-  font-size: 1.5rem;
-}
-
-ul {
-  padding-left: 1rem;
-}
-
-body {
-  background-color: none;
 }
 
 h1,
@@ -66,6 +48,31 @@ cite,
 blockquote {
   color: $primary-color;
   font-family: proxima-nova, sans-serif;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+cite {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: $small-font;
+  margin: 0.3rem 0 0;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+body {
+  background-color: none;
 }
 
 figcaption {
@@ -115,6 +122,10 @@ figcaption {
 }
 
 .navbar a {
+  color: $black;
+}
+
+.nav-dana-name {
   color: $black;
 }
 
@@ -175,6 +186,10 @@ a.nav-link {
 
 // Footer
 
+.footer-link {
+  display: flex;
+}
+
 .footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -189,17 +204,13 @@ a.nav-link {
   border-radius: 300px;
 }
 
-.footer-button:focus {
-  border: $border-width solid $white !important;
-}
-.footer-button:hover {
-  border: $border-width solid $white !important;
-}
-
 .footer p {
   color: $white;
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+.footer a {
+  color: $white;
 }
 .footer p:first-of-type {
   color: $white;
@@ -212,27 +223,45 @@ a.nav-link {
 }
 
 .copyright {
-  display: inline;
   color: $white;
+  font-size: $small-font;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-// Home page
+// Home page // Front page
 
-.home-page-image-container {
+.home-page-image {
   display: flex;
-  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.home-page .col {
+  padding: 0;
+}
+
+.home-page-body {
+  background-color: $primary-color;
 }
 
 .home-page li {
   color: $white;
 }
 
+.home-page h2 {
+  font-size: 2rem;
+}
+
 .home-page .bar {
   margin-bottom: 0;
 }
 
+.home-page .footer {
+  margin-top: 0;
+}
+
 @include media-breakpoint-down(md) {
-  .home-page-image-container {
+  .home-page-image {
     margin-bottom: 1rem;
   }
 }
@@ -377,9 +406,9 @@ div.first-image.gatsby-image-wrapper {
 }
 
 .biography {
-  background-color: $tertiary-color-light;
-  border-radius: 20px;
-  box-shadow: 3px 3px 8px $black-very-light;
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
   padding: 1rem;
 }
 
@@ -394,4 +423,25 @@ div.first-image.gatsby-image-wrapper {
 
 .about-page li:first-of-type {
   margin-top: 0.5rem;
+}
+
+// Donate page
+
+.donate-page .top-space {
+  margin-bottom: 1rem;
+}
+
+.donate-page .bar {
+  margin-bottom: 1rem;
+}
+
+.donate-page h1 {
+  margin-bottom: 0;
+}
+
+// Attributions page
+
+.attributions-body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

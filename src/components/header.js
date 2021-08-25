@@ -43,7 +43,7 @@ const Header = ({ pageTitle }) => {
 			<Container>
 				<Navbar.Brand>
 					<Link to="/" className="menu-item" activeClassName="active">
-						Dana Alan for West Vincent<br />Township Supervisor
+						<strong className="nav-dana-name">Dana Alan</strong> for West Vincent<br />Township Supervisor
 					</Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />

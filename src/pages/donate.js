@@ -1,19 +1,27 @@
 import React from "react"
 import Header from '../components/header'
+import Container from 'react-bootstrap/Container'
+import Footer from '../components/footer'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { StaticImage } from 'gatsby-plugin-image'
-import Footer from '../components/footer'
 
 
 
 const Donate = ({ data }) => {
   return (
-    <div>
+    <div className="donate-page">
       <Header pageTitle="Donate | Dana Alan for Supervisor of West Vincent Township" />
+      
+      <Container className="bar">
+        <Container>
+        <h1>Donations</h1>
+        </Container>
+      </Container>
+
+
       <Container className="top-space">
         <Row>
           <Col md={10} lg={7} xl={6}>
