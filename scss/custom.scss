@@ -351,6 +351,44 @@ svg {
 
 // Home page // Front page
 
+.home-page blockquote {
+  color: $white;
+  margin-top: 1rem;
+}
+
+.home-page cite {
+  color: $white;
+}
+
+.quote-box {
+  padding-bottom: 1rem;
+}
+
+.home-page .quote-box {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+  background-color: $primary-color;
+}
+
+@include media-breakpoint-up(xl) {
+  .home-page .quote-box {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@include media-breakpoint-between(md, xl) {
+  .home-page .quote-box {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.platform-points-box {
+  display: flex;
+  align-items: center;
+}
+
 @include media-breakpoint-down(md) {
   .platform-points {
     padding: 0 !important;
@@ -613,6 +651,10 @@ div.first-image.gatsby-image-wrapper {
   margin-top: 1rem;
   margin-right: 1rem;
   max-width: 95vw;
+}
+
+.donate-page .biography {
+  margin-top: 1rem;
 }
 
 // Attributions page

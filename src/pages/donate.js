@@ -6,6 +6,8 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { StaticImage } from 'gatsby-plugin-image'
+
 
 const Donate = ({ data }) => {
   return (
@@ -27,13 +29,16 @@ const Donate = ({ data }) => {
             </MDXRenderer>
           </Col>
         </Row>
-        <iframe id="donationPage"
-          title="West Vincent Democrats Donation Page"
-          width="1000"
-          height="500"
-          loading="lazy"
-          src="https://westvincentdemocrats.com/">  
-        </iframe>
+        <Row lg={9}>
+          <a className="biography" href="https://secure.actblue.com/donate/wvdemocrats?refcode=web">
+          <StaticImage 
+            layout="constrained"
+            alt="Dana headshot photo"
+            src={"../images/donation-page-image.png"}
+            className="home-page-image"
+          />
+          </a>
+        </Row>
       </Container>
       
       
