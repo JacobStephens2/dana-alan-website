@@ -24,7 +24,7 @@ const Home = ({ data }) => {
           </Col>
           <Col>
             <Container className="bar">
-              <Container>
+              <Container className="platform-points">
                 <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
                 <ul>
                 {

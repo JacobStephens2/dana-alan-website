@@ -25,11 +25,6 @@ const About = ({ data }) => {
           <cite>Theodore Roosevelt (26th President,&nbsp;USA)</cite>
         </Col>
         <Row>
-          <Col md={12} lg={7} xl={6}>
-            <MDXRenderer>
-              {data.mdx.body}
-            </MDXRenderer>
-          </Col>
           <Col md={12} lg={5}>
             <StaticImage
               src="../images/dana-profile-portrait-1x1.jpg"
@@ -38,6 +33,11 @@ const About = ({ data }) => {
               layout="constrained"
               className="about-image"
             />
+          </Col>
+          <Col md={12} lg={7} xl={6}>
+            <MDXRenderer>
+              {data.mdx.body}
+            </MDXRenderer>
           </Col>
         </Row>
       </Container>

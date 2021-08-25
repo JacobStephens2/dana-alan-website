@@ -77,10 +77,10 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /src/images/svg/ // See below to configure properly
+          include: `${__dirname}/src/images/svg/`, // See below to configure properly
         }
-      }
-    }
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',

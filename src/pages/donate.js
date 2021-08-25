@@ -6,9 +6,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { StaticImage } from 'gatsby-plugin-image'
-
-
 
 const Donate = ({ data }) => {
   return (
@@ -17,30 +14,29 @@ const Donate = ({ data }) => {
       
       <Container className="bar">
         <Container>
-        <h1>Donations</h1>
+        <h1>Donate</h1>
         </Container>
       </Container>
 
 
       <Container className="top-space">
         <Row>
-          <Col md={10} lg={7} xl={6}>
+          <Col>
             <MDXRenderer>
               {data.mdx.body}
             </MDXRenderer>
           </Col>
         </Row>
+        <iframe id="donationPage"
+          title="West Vincent Democrats Donation Page"
+          width="1000"
+          height="500"
+          loading="lazy"
+          src="https://westvincentdemocrats.com/">  
+        </iframe>
       </Container>
-      <Container>
-        <StaticImage 
-          src="../images/horse-1-gray-color-corrected.jpg" 
-          alt="Dana Alan horseback riding"
-          placeholder="blurred"
-        />
-        <figcaption>
-          At a young age, Dana rode her first pony, Gray, in West Vincent Township at Ludwig's horse&nbsp;show.
-        </figcaption>
-      </Container>
+      
+      
       <Footer />
 
     </div>
