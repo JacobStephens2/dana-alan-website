@@ -42,15 +42,17 @@ const Home = ({ data }) => {
           </Col>
 
         </Row>
-        <Container className="quote-box">
-          <div data-sal="slide-right" data-sal-duration="700">
-            <blockquote>
-              “There is no power for change greater than a community discovering what it
-              cares about.”
-            </blockquote>
-            <cite>Margaret J.&nbsp;Wheatley</cite>
-          </div>
-        </Container>
+        <div className="bright">
+          <Container className="quote-box">
+            <div data-sal="slide-right" data-sal-duration="700">
+              <blockquote>
+                “There is no power for change greater than a community discovering what it
+                cares about.”
+              </blockquote>
+              <cite>Margaret J.&nbsp;Wheatley</cite>
+            </div>
+          </Container>
+        </div>
 
       </div>
       <Footer />

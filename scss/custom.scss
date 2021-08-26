@@ -352,27 +352,32 @@ svg {
 // Home page // Front page
 
 .home-page blockquote {
-  color: $white;
+  color: $primary-color;
   margin-top: 1rem;
 }
 
 .home-page cite {
-  color: $white;
+  color: $primary-color;
 }
 
 .quote-box {
   padding-bottom: 1rem;
 }
 
+.home-page .bright {
+  background-color: $white;
+}
+
 .home-page .quote-box {
   padding-top: 1rem;
   padding-bottom: 6rem;
-  background-color: $primary-color;
+  background-color: $white;
+  color: $primary-color;
 }
 
 @include media-breakpoint-up(xl) {
   .home-page .quote-box {
-    padding-top: 7rem;
+    padding-top: 4rem;
     padding-bottom: 7rem;
   }
 }
