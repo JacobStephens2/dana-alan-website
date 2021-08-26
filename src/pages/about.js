@@ -19,7 +19,7 @@ const About = ({ data }) => {
         </Container>
       </Container>
 
-      <Container className="top-space biography">
+      <Container data-sal="slide-left" data-sal-duration="700" className="top-space biography">
         <Col md={9} lg={8} xl={7}>
           <blockquote>“The most important single ingredient in the formula of success is knowing how to get along with&nbsp;people.”&thinsp;</blockquote>
           <cite>Theodore Roosevelt (26th President,&nbsp;USA)</cite>

@@ -159,7 +159,7 @@ a.nav-link {
   text-transform: uppercase;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   a.nav-link.menu-donate.active {
     border: $border-width solid $black-heavy;
   }
@@ -439,20 +439,16 @@ div.first-image.gatsby-image-wrapper {
   margin-top: 0;
 }
 
+.fostering-page .biography {
+  margin-bottom: 1rem;
+}
+
 .fostering-page .container h1 {
   margin-bottom: 0;
 }
 
 .fostering-page .bar {
   margin-bottom: 1.7rem;
-}
-
-.fostering-page .col {
-  margin-top: 1.7rem;
-}
-
-.fostering-page .text-box {
-  margin-top: 1.7rem;
 }
 
 .fostering-page .text-box h2 {
@@ -477,6 +473,15 @@ div.first-image.gatsby-image-wrapper {
   }
 }
 
+@include media-breakpoint-down(md) {
+  .fostering-page .text-box {
+    margin-top: 0.75rem;
+  }
+  .fostering-page .text-box p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .fostering-page h1 {
     margin-bottom: 1.3rem;
@@ -490,6 +495,10 @@ div.first-image.gatsby-image-wrapper {
 }
 
 // Events page
+
+.events-body .footer {
+  margin-top: 0;
+}
 
 .background-container img {
   height: 900px;

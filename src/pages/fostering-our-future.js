@@ -19,7 +19,7 @@ const FosteringOurFuture = ({ data }) => {
 
       <Container className="top-space fostering-page">
 
-        <Row>
+        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
           <Col><StaticImage className="first-image" src="../images/fostering-our-future/sustainability-township-bldg-and-yatch-club-2x3.jpeg" alt="Dana profile photo" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Financial Stability</h2>
@@ -27,7 +27,7 @@ const FosteringOurFuture = ({ data }) => {
           </Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-right" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/public-works-2x3.jpg" alt="Township building with solar panels" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Sustainability</h2>
@@ -36,7 +36,7 @@ const FosteringOurFuture = ({ data }) => {
             <p>We must always be mindful of our effects on people, profits, and our&nbsp;planet.</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/police-weatherstone-2x3-expanded.jpeg" alt="Weatherstone house flag" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Supporting our Police&nbsp;Force</h2>
@@ -45,14 +45,14 @@ const FosteringOurFuture = ({ data }) => {
             <p>The West Vincent Police make even our smallest concerns their top&nbsp;priorities.</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-right" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/rainbow-2x3.JPG" alt="Dana profile" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Diversity and Inclusion</h2>
             <p>We need to invite diverse and younger voices into the local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/open-space-birchrun-road-2x3-expanded.jpeg" alt="Landscape view at Birchrun road" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Open Space</h2>
@@ -60,21 +60,21 @@ const FosteringOurFuture = ({ data }) => {
             <p>By continuing to conserve our land we reduce the congestion on our roads and increase our personal health and welfare. Protected open space improves the quality of life for all of&nbsp;us!</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-right" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/trash-pickup-3x2.jpg" alt="People tending to young trees" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Supporting our Public Works&nbsp;Department</h2>
             <p>They do so much for us that goes unnoticed, just because they are continually on top of things - from maintaining our park lands to removing downed trees - we need to give our road crew the tools they require to serve us well, with minimal downtime and maximum&nbsp;productivity.</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/parks-evans-park-gazebo-2x3.jpeg" alt="Evans park gazebo" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Parks and Recreation</h2>
             <p>Work with our Parks & Recreation Commission as well as our residents to enhance public use and enjoyment of our beautiful parks and work with our Supervisors and township manager to continue to find grants to fund&nbsp;improvements.</p></Col>
         </Row>
 
-        <Row>
+        <Row data-sal="slide-right" data-sal-duration="700" className="biography">
           <Col><StaticImage src="../images/fostering-our-future/community-dog-walk-2x3.jpg" alt="Community dog walk" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Community</h2>
@@ -82,8 +82,8 @@ const FosteringOurFuture = ({ data }) => {
             <p>I am encouraged by the vibrant retail developments slated to occur within Weatherstone Flats, where unique shops, important human services, and convenient restaurants – all offered with walkable/bikeable ease – will help to keep our residents localized, happy, and supporting one&nbsp;another.</p></Col>
         </Row>
 
-        <Row>
-        <Col><StaticImage src="../images/fostering-our-future/tent-3x2-v2.jpg" alt="Dana campaigning" placeholder="blurred" /></Col>
+        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
+        <Col><StaticImage src="../images/tent-3x2-v3.jpg" alt="Dana campaigning" placeholder="blurred" /></Col>
         <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Communication</h2>
             <p>I believe local government works best when clear and concise information is easily available to the public. I am committed to driving ongoing and accessible township updates via our WVT website, through social media channels, from a diverse series of educational forums for residents where helpful insights are shared and dialogue is welcome, and by enhancing the inner-connectivity between our committees and with the&nbsp;public.</p>

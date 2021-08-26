@@ -14,9 +14,7 @@ const Footer = () => {
 			<Row>
 				<Col xs={4} sm={3} md={4} lg={0} className="donate-column">
 					<div className="donate-button-box">
-						<a href="https://secure.actblue.com/donate/wvdemocrats?refcode=web">
-							Donate
-						</a>
+						<Link to="/donate" className="nav-link menu-donate donate-button" activeClassName="active">Donate</Link>
 					</div>
 				</Col>	
 

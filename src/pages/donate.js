@@ -29,7 +29,7 @@ const Donate = ({ data }) => {
             </MDXRenderer>
           </Col>
         </Row>
-        <Row lg={9}>
+        <Row data-sal="slide-left" data-sal-duration="700" lg={9}>
           <a className="biography" href="https://secure.actblue.com/donate/wvdemocrats?refcode=web">
           <StaticImage 
             layout="constrained"

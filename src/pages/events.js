@@ -29,7 +29,7 @@ const Events = ({ data }) => {
           style={{
             gridArea: "1/1",
           }}
-          layout="fullWidth"
+          layout="constrained"
           alt="Dana campaigning"
           src={"../images/community-garden-1.jpeg"}
         />
@@ -40,7 +40,7 @@ const Events = ({ data }) => {
             display: "grid",
           }}
         >
-          <Container className="accordion-container">
+          <Container data-sal="slide-right" data-sal-duration="700" className="accordion-container">
             <Accordion defaultActiveKey="0">
               {
                 data.allMdx.nodes.map((node, index) => (
