@@ -104,6 +104,10 @@ figcaption {
   color: $white;
 }
 
+.correction {
+  color: red;
+}
+
 @include media-breakpoint-down(md) {
   ul {
     padding-left: 1.5rem;

@@ -63,12 +63,12 @@ const About = ({ data }) => {
 
             <ul>
               <li>Dana holds a BS in Business Administration from Saint Joseph’s&nbsp;University.</li>
-              <li>Dana is a board member of the Friends of the Henrietta Hankin Branch Library and a member of the Community&nbsp;Garden.</li>
+              <li>Dana is a board member of the Friends of the Henrietta Hankin Branch Library and a founding member of the Community&nbsp;Garden.</li>
               <li>Dana regularly attends and speaks up at Supervisor meetings, as well as Parks & Recreation, EAC, Planning Commission, and Open&nbsp;Space.</li>
               <li>Dana has a consistent history of volunteering here in West Vincent. While her children were in school, Dana was on the PTA and helped out with the band and both the Boy and Girl Scouts. She has organized and worked at various school fundraisers/auctions and community events, such as Community&nbsp;Day.</li>
             </ul>
 
-            <p>Learn more at <a href="https://westvincentdemocrats.com/candidates">West Vincent Democrats candidates page</a> and the <a href="https://www.facebook.com/DanaAlan_WVT-100405935539466">campaign Facebook&nbsp;page</a>.</p>
+            <p>Learn more at <a href="https://westvincentdemocrats.com/candidates">West Vincent Democrats candidates page</a> and the <a href="https://www.facebook.com/DanaAlan_WVT-100405935539466"> Facebook&nbsp;page</a>.</p>
 
             <p>
               Email Dana at{" "}
