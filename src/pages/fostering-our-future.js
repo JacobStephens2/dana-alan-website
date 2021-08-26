@@ -19,7 +19,7 @@ const FosteringOurFuture = ({ data }) => {
 
       <Container className="top-space fostering-page">
 
-        <Row data-sal="slide-left" data-sal-duration="700" className="biography">
+        <Row className="biography">
           <Col><StaticImage className="first-image" src="../images/fostering-our-future/sustainability-township-bldg-and-yatch-club-2x3.jpeg" alt="Dana profile photo" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Financial Stability</h2>

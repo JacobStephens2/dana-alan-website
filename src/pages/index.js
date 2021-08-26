@@ -24,7 +24,7 @@ const Home = ({ data }) => {
                 />
           </Col>
 
-          <Col data-sal="slide-left" data-sal-duration="700" md={12} lg={12} xl={5} className="platform-points-box">
+          <Col md={12} lg={12} xl={5} className="platform-points-box">
             <Container className="bar">
               <Container className="platform-points">
                 <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>

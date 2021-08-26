@@ -40,7 +40,7 @@ const Events = ({ data }) => {
             display: "grid",
           }}
         >
-          <Container data-sal="slide-right" data-sal-duration="700" className="accordion-container">
+          <Container className="accordion-container">
             <Accordion defaultActiveKey="0">
               {
                 data.allMdx.nodes.map((node, index) => (
