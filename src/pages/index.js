@@ -27,7 +27,7 @@ const Home = ({ data }) => {
           <Col md={12} lg={12} xl={5} className="platform-points-box">
             <Container className="bar">
               <Container className="platform-points">
-                <h1>As West Vincent Township Supervisor, Dana Alan will:</h1>
+                <h1>As West Vincent Township Supervisor, Dana Alan&nbsp;will:</h1>
                 <ul>
                 {
                   data.allMdx.nodes.map((node) => (
