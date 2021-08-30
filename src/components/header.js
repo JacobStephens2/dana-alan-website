@@ -19,13 +19,13 @@ const Header = ({ pageTitle }) => {
 			<meta charSet="utf-8" />
 			<meta name="description" content="Information about Dana Alan's 2021 campaign for West Vincent Township Supervisor" />
 			<title>Dana Alan for West Vincent Township Supervisor Campaign Site</title>
-			<link rel="canonical" href="https://danaalan.gatsbyjs.io" />
+			<link rel="canonical" href="https://dana4wvt.com" />
 			<script type="application/ld+json">
 				{`
 					{
-					"@context": "https://danaalan.gatsbyjs.io",
+					"@context": "https://dana4wvt.com",
 					"@type": "Individual",
-					"url": "https://danaalan.gatsbyjs.io",
+					"url": "https://dana4wvt.com",
 					"name": "Dana Alan for West Vincent Township Supervisor Campaign Site",
 					"contactPoint": {
 						"@type": "ContactPoint",
