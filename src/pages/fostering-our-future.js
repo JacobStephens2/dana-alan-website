@@ -49,7 +49,7 @@ const FosteringOurFuture = ({ data }) => {
           <Col><StaticImage src="../images/fostering-our-future/rainbow-2x3.JPG" alt="Dana profile" placeholder="blurred" /></Col>
           <Col className="text-box" sm={12} md={6} lg={7} xl={6}>
             <h2>Diversity and Inclusion</h2>
-            <p>We need to invite younger more diverse voices into the local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p></Col>
+            <p>We need to invite younger more diverse voices into local government, to ensure the township’s vitality far into the future. I will work to engage and inspire our younger residents to participate through involvement and&nbsp;education.</p></Col>
         </Row>
 
         <Row data-sal="slide-left" data-sal-duration="700" className="biography">

@@ -27,7 +27,7 @@ const Footer = () => {
 				</Col>	
 			
 				<Col xs={12} sm={6} md={4} lg={4} className="attribution-column">
-					<div className="copyright attribution">Designed and Donated&nbsp;by&ensp;<a className="attribution-link" href="https://stewardgoods.com">15&nbsp;East&nbsp;Creative</a></div>
+					<div className="copyright attribution">Designed and Donated&nbsp;by&ensp;<a className="attribution-link" href="https://15eastcreative.com">15&nbsp;East&nbsp;Creative</a></div>
 				</Col>	
 
 				<Col xs={12} sm={6} md={2} className="copyright-column align-items-center">
