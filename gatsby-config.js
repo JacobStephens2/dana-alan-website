@@ -16,14 +16,14 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/content/`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
-      }
+      },
     },
     `gatsby-plugin-mdx`,
     {
@@ -31,7 +31,7 @@ module.exports = {
       options: {
         sassOptions: {
           includePaths: ["scss"],
-        }
+        },
       },
     },
     `gatsby-plugin-image`,
@@ -65,10 +65,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-background-image-es5',
+      resolve: "gatsby-background-image-es5",
       options: {
         // add your own characters to escape, replacing the default ':/'
-        specialChars: '/:',
+        specialChars: "/:",
       },
     },
     `gatsby-plugin-styled-components`,
@@ -78,26 +78,39 @@ module.exports = {
       options: {
         rule: {
           include: `${__dirname}/src/images/svg/`, // See below to configure properly
-        }
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        typekit: { id: process.env.ADOBE_TYPEKIT_KEY}
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-preconnect',
-      options: {
-        domains: ['https://use.typekit.net'],
+        typekit: { id: process.env.ADOBE_TYPEKIT_KEY },
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-preconnect",
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        domains: ["https://use.typekit.net"],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "GATSBY_GOOGLE_ANALYTICS_ID", // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
       },
     },
     {
