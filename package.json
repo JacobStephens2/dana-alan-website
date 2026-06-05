@@ -3,7 +3,7 @@
   "private": true,
   "description": "Dana Alan's website",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
